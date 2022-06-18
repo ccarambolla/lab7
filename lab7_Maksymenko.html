@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основи JavaScript програмування</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+    //Завдання 1:
+        alert(checkPair(7));
+        function checkPair(arg) {
+            let num = Number.isInteger(arg);
+            if(num) {
+                if(arg%2===0){
+                    return("Парне");
+                }
+                else {
+                    return ("Непарне");
+                }
+            }
+            else {
+                return ("");
+            }
+        }
+
+    // Завдання 2:
+        function summOfSimpleNums() {
+        let arr = [];
+        let i = 1;
+        while(true) {
+            let simple = true;
+            for(let y = 2; y < i; y++) {
+                if(i%y===0) {
+                    simple = false;
+                    break;
+                }
+            }
+            if (simple) {
+                arr.push(i);
+            }
+            i++;
+            if(arr.length===5) {
+                let summ = 0;
+                for (let x = 0 ; x < arr.length; x++) {
+                    summ += arr[x];
+                }
+                return (summ);
+            }
+        }
+    }
+        alert(summOfSimpleNums());
+
+    // Завдання 3:
+        alert(numbers(7));
+        function numbers(n) {
+            let summ = 0;
+            for (let x = 1; x<=n; x++) {
+                let num ="";
+                for (let y = 1 ; y <= x ; y++) {
+                    num +="1";
+                }
+                summ += parseInt(num);
+            }
+            return summ;
+        }
+    </script>
+</body>
+</html>
